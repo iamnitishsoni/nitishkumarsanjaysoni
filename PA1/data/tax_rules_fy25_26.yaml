@@ -1,0 +1,75 @@
+# ==============================================================================
+# Statutory Income Tax Rules for FY 2025-26 (AY 2026-27) - Finance Act 2025
+# ==============================================================================
+
+financial_year: "2025-26"
+assessment_year: "2026-27"
+
+# ------------------------------------------------------------------------------
+# Old Tax Regime Provisions (Remains Unchanged)
+# ------------------------------------------------------------------------------
+old_regime:
+  name: "Old Tax Regime"
+  standard_deduction: 50000
+  slabs:
+    - { min: 0, up_to: 250000, rate: 0.00 }
+    - { min: 250000, up_to: 500000, rate: 0.05 }
+    - { min: 500000, up_to: 1000000, rate: 0.20 }
+    - { min: 1000000, up_to: null, rate: 0.30 }
+  
+  deductions_allowed:
+    hra_exemption: true
+    section_80c_max: 150000
+    section_80ccd_1b_max: 50000
+    section_80d:
+      self_family_max: 25000
+      self_family_senior_max: 50000
+      parents_max: 25000
+      parents_senior_max: 50000
+      total_possible_max: 100000
+    home_loan_interest_max: 200000
+
+  section_87a:
+    max_taxable_income: 500000
+    max_rebate_amount: 12500
+    marginal_relief_applicable: false
+
+# ------------------------------------------------------------------------------
+# New Tax Regime Provisions (Finance Act 2025 Revised Slabs & Rebate)
+# ------------------------------------------------------------------------------
+new_regime:
+  name: "New Tax Regime (Finance Act 2025)"
+  standard_deduction: 75000
+  slabs:
+    - { min: 0, up_to: 400000, rate: 0.00 }
+    - { min: 400000, up_to: 800000, rate: 0.05 }
+    - { min: 800000, up_to: 1200000, rate: 0.10 }
+    - { min: 1200000, up_to: 1600000, rate: 0.15 }
+    - { min: 1600000, up_to: 2000000, rate: 0.20 }
+    - { min: 2000000, up_to: 2400000, rate: 0.25 }
+    - { min: 2400000, up_to: null, rate: 0.30 }
+
+  deductions_allowed:
+    hra_exemption: false
+    section_80c_max: 0
+    section_80ccd_1b_max: 0
+    section_80d_allowed: false
+    home_loan_interest_max: 0
+
+  section_87a:
+    max_taxable_income: 1200000      # Raised to 12 Lakhs in Finance Act 2025
+    max_rebate_amount: 60000         # Full tax rebated up to 12 Lakhs
+    marginal_relief_applicable: true # Tax cannot exceed (Taxable Income - 12,00,000)
+
+common:
+  cess_rate: 0.04
+  surcharge_thresholds:
+    old_regime:
+      - { threshold: 5000000, rate: 0.10 }
+      - { threshold: 10000000, rate: 0.15 }
+      - { threshold: 20000000, rate: 0.25 }
+      - { threshold: 50000000, rate: 0.37 }
+    new_regime:
+      - { threshold: 5000000, rate: 0.10 }
+      - { threshold: 10000000, rate: 0.15 }
+      - { threshold: 20000000, rate: 0.25 }

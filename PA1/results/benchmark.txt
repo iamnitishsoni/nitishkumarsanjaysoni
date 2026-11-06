@@ -1,0 +1,23 @@
+PROJECT: Indian Salaried Income Tax Engine
+
+IMPLEMENTATION 1: Rule-Based Engine
+Uses Python tax calculation functions and YAML tax rules.
+
+IMPLEMENTATION 2: LLM at Query Time
+Uses Gemini API to interpret user input and generate tax calculations.
+
+IMPLEMENTATION 3: Compiled Rules Engine
+Loads structured YAML tax rules and calculates tax using Python functions.
+
+TEST DATA:
+205 supplied test cases.
+50 plain-language examples.
+
+RULE ENGINE TEST RESULTS:
+Previously recorded: 205 passed, 0 failed.
+Accuracy: 100% against supplied expected outputs.
+
+LIMITATIONS:
+LLM-generated calculations may vary.
+Compiled rules depend on the correctness of YAML data.
+Performance, latency and API cost require separate benchmarking.

@@ -1,0 +1,51 @@
+# ==============================================================================
+# Project B: Data Quality Layer Configuration (QoL Feature)
+# ==============================================================================
+
+dataset:
+  name: "NYC 311 Service Requests"
+  year: 2023
+  expected_columns:
+    - "unique_key"
+    - "created_date"
+    - "closed_date"
+    - "agency"
+    - "complaint_type"
+    - "descriptor"
+    - "status"
+    - "incident_zip"
+    - "borough"
+    - "latitude"
+    - "longitude"
+    - "resolution_description"
+
+declarative_rules:
+  geo_bounds:
+    lat_min: 40.47
+    lat_max: 40.92
+    lon_min: -74.26
+    lon_max: -73.70
+  valid_boroughs:
+    - "MANHATTAN"
+    - "BROOKLYN"
+    - "QUEENS"
+    - "BRONX"
+    - "STATEN ISLAND"
+  # Standard NYC Zip prefix mapping
+  borough_zip_prefixes:
+    "MANHATTAN": ["100", "101", "102"]
+    "BRONX": ["104"]
+    "STATEN ISLAND": ["103"]
+    "BROOKLYN": ["112"]
+    "QUEENS": ["110", "111", "113", "114", "116"]
+
+statistical_thresholds:
+  null_spike_z_score: 3.0
+  near_duplicate_time_delta_seconds: 300
+  near_duplicate_text_similarity: 0.85
+
+hybrid_pipeline:
+  tier1_declarative_enabled: true
+  tier2_statistical_enabled: true
+  tier3_llm_audit_sample_rate: 0.005  # 0.5% audit sample
+  cost_per_million_llm_tokens_usd: 0.30

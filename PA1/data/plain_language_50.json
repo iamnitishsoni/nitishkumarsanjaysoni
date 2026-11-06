@@ -1,0 +1,316 @@
+[
+  {
+    "id": 1,
+    "text": "My annual salary is 6,00,000 INR with no other investments.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 2,
+    "text": "I earn 12 LPA gross salary and invest 1,50,000 in PPF under 80C.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 3,
+    "text": "Annual package 18 Lakhs. Paying rent of 25,000 per month in Mumbai, 80C is 150000.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 4,
+    "text": "Gross salary is 25 LPA. Home loan interest paid is 2 Lakhs, NPS contribution is 50,000.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 5,
+    "text": "I earn 7.5 LPA. No rent paid, living in own house. 80C investment of 50000.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 6,
+    "text": "Total CTC is 10 Lakhs. Rent paid is 15,000 per month in Pune (non-metro). 80C is 1.5 Lakhs.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 7,
+    "text": "Salary 50 Lakhs gross. Maxed out 80C at 1.5L and NPS 80CCD(1B) at 50,000.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 8,
+    "text": "Gross salary is 8,50,000 INR. Health insurance premium of 20,000 for self.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 9,
+    "text": "Earning 15 LPA. Rent 30,000 per month in Delhi metro, 80C full 1.5L, health insurance 25k.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 10,
+    "text": "Gross income is 4,50,000 INR from salary. No deductions.",
+    "type": "clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 11,
+    "text": "Bhai mera package 12 LPA hai, 80C me 1.5L dala hai.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 12,
+    "text": "Gross salary 15 Lakhs hai. Rent 20k per month deta hu Mumbai me.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 13,
+    "text": "Salary 8 LPA hai bas, koi deduction ya investment nahi hai.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 14,
+    "text": "Mera annual ctc 22 LPA hai, home loan interest 2 lakh jata hai.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 15,
+    "text": "Bhai 9.5 Lakh package hai, 1.5L PPF me dala aur 50k NPS me.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 16,
+    "text": "16 LPA gross income hai, Delhi me rent 30k pm deta hu, 80C me 1 lakh.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 17,
+    "text": "Total kamata hu 7 LPA, koi rent nahi hai.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 18,
+    "text": "Salaried hu, CTC 14 Lakhs. Mediclaim 25k bhara aur 80C pura 1.5 lakh.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 19,
+    "text": "Gross salary 6.5 LPA hai, kuch bhi investment nahi kiya.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 20,
+    "text": "Bhai 30 LPA package hai, 80C 1.5L aur housing loan interest 2L hai.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 21,
+    "text": "10 LPA salary, Kolkata me 12k rent deta hu har mahine, 80C 50k.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 22,
+    "text": "Mera salary 5 LPA hai, tax kitna banega?",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 23,
+    "text": "Yearly package 20 Lakhs. Rent 40k in Chennai metro, 80C 1.5L, NPS 50k.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 24,
+    "text": "Bhai annual 11 LPA hai. 80C me 1.5 lakh invest kiya hu.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 25,
+    "text": "Gross 13 LPA hai, parents senior citizen hai aur unka 40k health insurance liya hai.",
+    "type": "hinglish_clear",
+    "expected_status": "ready"
+  },
+  {
+    "id": 26,
+    "text": "I earn 12 LPA and pay rent every month.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "rent_paid"
+  },
+  {
+    "id": 27,
+    "text": "Bhai 15 LPA salary hai, HRA claim karna chahta hu.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "rent_paid"
+  },
+  {
+    "id": 28,
+    "text": "I pay 25,000 rent per month and invested 1.5L in 80C.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "gross_salary"
+  },
+  {
+    "id": 29,
+    "text": "Package is 10 Lakhs, paying rent 20k per month.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "city_type"
+  },
+  {
+    "id": 30,
+    "text": "Just tell me my tax please, I have some investments in LIC.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "gross_salary"
+  },
+  {
+    "id": 31,
+    "text": "Salary 14 LPA, bought health insurance for parents.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "are_parents_senior"
+  },
+  {
+    "id": 32,
+    "text": "I have 1.5 lakh 80C and home loan. What is my tax?",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "gross_salary"
+  },
+  {
+    "id": 33,
+    "text": "Mera 8 LPA salary hai, flat ka kiraya deta hu Bangalore me.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "rent_paid"
+  },
+  {
+    "id": 34,
+    "text": "CTC is 18 LPA. How much HRA can I get?",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "rent_paid"
+  },
+  {
+    "id": 35,
+    "text": "Kiraya 18000 per month hai, 80C pura bhara hai.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "gross_salary"
+  },
+  {
+    "id": 36,
+    "text": "I make 9 Lakhs a year. I also have mediclaim policy.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "are_parents_senior"
+  },
+  {
+    "id": 37,
+    "text": "Can you compare old and new tax regimes for me?",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "gross_salary"
+  },
+  {
+    "id": 38,
+    "text": "Gross 16 LPA, paying 30k rent in metro.",
+    "type": "incomplete",
+    "expected_status": "ready"
+  },
+  {
+    "id": 39,
+    "text": "Salary 20 LPA, paying home loan.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "home_loan_interest"
+  },
+  {
+    "id": 40,
+    "text": "Mera package 7.5L hai aur mediclaim liya hai mummy papa ke liye.",
+    "type": "incomplete",
+    "expected_status": "needs_clarification",
+    "missing": "are_parents_senior"
+  },
+  {
+    "id": 41,
+    "text": "I want new regime for my 15 LPA salary with 1.5L 80C and 2L housing loan deduction.",
+    "type": "contradictory",
+    "expected_status": "ready"
+  },
+  {
+    "id": 42,
+    "text": "In new tax regime compute my tax on 12 LPA claiming HRA of 25k per month in Mumbai.",
+    "type": "contradictory",
+    "expected_status": "ready"
+  },
+  {
+    "id": 43,
+    "text": "Calculate tax on 18 LPA under new regime with 50,000 NPS 80CCD(1B) deduction.",
+    "type": "contradictory",
+    "expected_status": "ready"
+  },
+  {
+    "id": 44,
+    "text": "My CTC is 10 LPA and I invest 3 Lakhs in 80C.",
+    "type": "edge_cap",
+    "expected_status": "ready"
+  },
+  {
+    "id": 45,
+    "text": "Gross salary is 0 INR.",
+    "type": "edge_zero",
+    "expected_status": "ready"
+  },
+  {
+    "id": 46,
+    "text": "Salary 80 Lakhs, want to claim 5 Lakhs home loan interest deduction.",
+    "type": "edge_cap",
+    "expected_status": "ready"
+  },
+  {
+    "id": 47,
+    "text": "Package 7,00,000 INR exactly with no deductions.",
+    "type": "threshold",
+    "expected_status": "ready"
+  },
+  {
+    "id": 48,
+    "text": "Package 7,00,100 INR with no deductions under new regime.",
+    "type": "marginal_relief",
+    "expected_status": "ready"
+  },
+  {
+    "id": 49,
+    "text": "Salary 50,00,100 INR with 80C 1.5L.",
+    "type": "surcharge_threshold",
+    "expected_status": "ready"
+  },
+  {
+    "id": 50,
+    "text": "Bhai salary 5 crore hai, 80C 1.5 lakh hai.",
+    "type": "surcharge_top",
+    "expected_status": "ready"
+  }
+]

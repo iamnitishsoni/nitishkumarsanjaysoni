@@ -1,0 +1,31 @@
+test_id,description,dataset_claims_official_verified,old_expected,old_calculated,old_match,new_expected,new_calculated,new_match,overall_status
+1,Nil return below basic exemption,True,0.0,0,True,0.0,0,True,PASS
+2,Standard salaried 5 Lakh gross,True,0.0,0,True,0.0,0,True,PASS
+3,Rebate threshold Old Regime (Gross 5.5L with 50k std ded = 5L taxable),True,0.0,0,True,0.0,0,True,PASS
+4,Just above rebate Old Regime (Gross 5.51L -> taxable 5.01L),True,13210.0,13210,True,0.0,0,True,PASS
+5,Rebate threshold New Regime (Gross 7.75L with 75k std ded = 7L taxable),True,59800.0,59800,True,0.0,0,True,PASS
+6,New regime marginal relief edge (Gross 7.76L -> taxable 7.01L),True,60010.0,60010,True,1040.0,1040,True,PASS
+7,New regime marginal relief higher (Gross 7.85L -> taxable 7.10L),True,61880.0,61880,True,10400.0,10400,True,PASS
+8,Salaried 8 Lakh gross no deductions,True,65000.0,65000,True,23400.0,23400,True,PASS
+9,Salaried 10 Lakh gross no deductions,True,106600.0,106600,True,44200.0,44200,True,PASS
+10,Salaried 10 Lakh with full 80C,True,75400.0,75400,True,44200.0,44200,True,PASS
+11,Salaried 12 Lakh no deductions,True,163800.0,163800,True,71500.0,71500,True,PASS
+12,Salaried 12 Lakh with 80C + 80CCD,True,106600.0,106600,True,71500.0,71500,True,PASS
+13,Salaried 15 Lakh boundary new regime,True,280800.0,280800,True,145600.0,145600,True,PASS
+14,Salaried 15 Lakh with 80C + 80D,True,195000.0,195000,True,130000.0,130000,True,PASS
+15,Salaried 18 Lakh metro HRA claim,True,180960.0,180960,True,215800.0,215800,True,PASS
+16,Salaried 20 Lakh non-metro HRA,True,299520.0,299520,True,278200.0,278200,True,PASS
+17,Salaried 20 Lakh with Home loan interest,True,304200.0,304200,True,278200.0,278200,True,PASS
+18,Salaried 25 Lakh high deductions (Old wins),True,310440.0,310440,True,434200.0,434200,True,PASS
+19,Salaried 30 Lakh no deductions (New wins),True,725400.0,725400,True,590200.0,590200,True,PASS
+20,Salaried 40 Lakh with 80C and home loan,True,881400.0,881400,True,902200.0,902200,True,PASS
+21,Surcharge threshold boundary (50L taxable),True,1391000.0,1391000,True,1237600.0,1237600,True,PASS
+22,Surcharge edge with marginal relief (50.5L taxable),True,1443000.0,1443000,True,1289600.0,1289600,True,PASS
+23,Surcharge 10% tier (Gross 60L),True,1673100.0,1673100,True,1678820.0,1678820,True,PASS
+24,Surcharge 15% tier boundary (1 Cr),True,2951000.0,2951000,True,3077360.0,3077360,True,PASS
+25,Surcharge 15% tier with marginal relief,True,3003000.0,3003000,True,2849600.0,2849600,True,PASS
+26,Surcharge 25% tier boundary (2 Cr),True,6071000.0,6071000,True,6805240.0,6805240,True,PASS
+27,Surcharge 37% Old regime vs 25% New regime cap (5.5 Cr),True,20345000.0,20345000,True,21017750.0,21017750,True,PASS
+28,Maxed out senior citizen 80D case,True,195000.0,195000,True,153400.0,153400,True,PASS
+29,HRA where rent is less than 10% salary (0 exemption),True,163800.0,163800,True,71500.0,71500,True,PASS
+30,Zero gross salary test case,True,0.0,0,True,0.0,0,True,PASS

@@ -1,0 +1,6 @@
+pyyaml
+google-genai
+python-dotenv
+pytest
+pandas
+pydantic

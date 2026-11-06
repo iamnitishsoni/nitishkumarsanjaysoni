@@ -1,0 +1,78 @@
+# ==============================================================================
+# Statutory Income Tax Rules for FY 2024-25 (AY 2025-26)
+# Sources: Income Tax Act, 1961 as amended by Finance Act 2024 (Official Calculator)
+# ==============================================================================
+
+financial_year: "2024-25"
+assessment_year: "2025-26"
+
+# ------------------------------------------------------------------------------
+# Old Tax Regime Provisions
+# ------------------------------------------------------------------------------
+old_regime:
+  name: "Old Tax Regime"
+  standard_deduction: 50000          # Section 16(ia)
+  slabs:
+    - { min: 0, up_to: 250000, rate: 0.00 }
+    - { min: 250000, up_to: 500000, rate: 0.05 }
+    - { min: 500000, up_to: 1000000, rate: 0.20 }
+    - { min: 1000000, up_to: null, rate: 0.30 }
+  
+  deductions_allowed:
+    hra_exemption: true              # Section 10(13A)
+    section_80c_max: 150000          # Section 80C
+    section_80ccd_1b_max: 50000      # Section 80CCD(1B) - NPS additional
+    section_80d:
+      self_family_max: 25000         # Non-senior
+      self_family_senior_max: 50000  # Senior citizen (>= 60)
+      parents_max: 25000             # Non-senior parents
+      parents_senior_max: 50000      # Senior citizen parents
+      total_possible_max: 100000
+    home_loan_interest_max: 200000   # Section 24(b) - self occupied loss
+
+  section_87a:
+    max_taxable_income: 500000       # Rebate available up to 5 Lakhs
+    max_rebate_amount: 12500         # Max rebate (tax becomes 0)
+    marginal_relief_applicable: false
+
+# ------------------------------------------------------------------------------
+# New Tax Regime Provisions (Section 115BAC as amended by Finance Act 2024)
+# ------------------------------------------------------------------------------
+new_regime:
+  name: "New Tax Regime (Sec 115BAC)"
+  standard_deduction: 75000          # Increased to 75k in Finance (No.2) Act 2024
+  slabs:
+    - { min: 0, up_to: 300000, rate: 0.00 }
+    - { min: 300000, up_to: 700000, rate: 0.05 }
+    - { min: 700000, up_to: 1000000, rate: 0.10 }
+    - { min: 1000000, up_to: 1200000, rate: 0.15 }
+    - { min: 1200000, up_to: 1500000, rate: 0.20 }
+    - { min: 1500000, up_to: null, rate: 0.30 }
+
+  deductions_allowed:
+    hra_exemption: false
+    section_80c_max: 0
+    section_80ccd_1b_max: 0
+    section_80d_allowed: false
+    home_loan_interest_max: 0
+
+  section_87a:
+    max_taxable_income: 700000       # Rebate available up to 7 Lakhs
+    max_rebate_amount: 25000         # Full tax rebated at or below 7 Lakhs
+    marginal_relief_applicable: true # Tax cannot exceed (Taxable Income - 7,00,000)
+
+# ------------------------------------------------------------------------------
+# Common Tax Components: Surcharge and Cess
+# ------------------------------------------------------------------------------
+common:
+  cess_rate: 0.04                    # 4% Health & Education Cess
+  surcharge_thresholds:
+    old_regime:
+      - { threshold: 5000000, rate: 0.10 }
+      - { threshold: 10000000, rate: 0.15 }
+      - { threshold: 20000000, rate: 0.25 }
+      - { threshold: 50000000, rate: 0.37 }
+    new_regime:
+      - { threshold: 5000000, rate: 0.10 }
+      - { threshold: 10000000, rate: 0.15 }
+      - { threshold: 20000000, rate: 0.25 } # Surcharge capped at 25% under 115BAC
